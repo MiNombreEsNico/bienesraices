@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use "sass:math";
+
+.seccion {
+    margin-top: math.div(v.$separacion, 2);
+    margin-bottom: math.div(v.$separacion, 2);
+}
+.contenido-centrado {
+    max-width: 80rem;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+.redondeado {
+    border-radius: 1rem;
+}
+.w-100 {
+    width: 100%;
+}
