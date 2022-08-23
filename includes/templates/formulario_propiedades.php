@@ -1,11 +1,7 @@
 <fieldset>
                 <legend>Información General</legend>
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="propiedad[titulo]" placeholder="Título Propiedad" value="<?php
-
-use App\Vendedor;
-
- echo s($propiedad->titulo); ?>">
+                <input type="text" id="titulo" name="propiedad[titulo]" placeholder="Título Propiedad" value="<?php echo s($propiedad->titulo); ?>">
 
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="propiedad[precio]" placeholder="Precio Propiedad" value="<?php echo s($propiedad->precio); ?>">
@@ -39,12 +35,9 @@ use App\Vendedor;
                 <label for="vendedor">Vendedor</label>
                 <select name="propiedad[vendedorId]" id="vendedor">
                     <option selected value="">--- Seleccione ---</option>
-                    <?php foreach($vendedores as $vendedor){?>
-                        <option 
-                        <?php echo $propiedad->vendedorid === $vendedor->id ? "selected" : ''; ?>
-                        value="<?php echo s($vendedor->id); ?>">
-                    <?php echo s($vendedor->nombre) . " " . s($vendedor->apellido); ?></option>
-                    <?php }?>
+                    <?php foreach($vendedores as $vendedor): ?>
+                        <option <?php echo $propiedad->vendedorId === $vendedor->id ? 'selected' : ''; ?> value="<?php echo s($vendedor->id); ?>"><?php echo s($vendedor->nombre) . " " . s($vendedor->apellido); ?></option>
+                    <?php endforeach;?>
                 </select>
             </fieldset>
             
