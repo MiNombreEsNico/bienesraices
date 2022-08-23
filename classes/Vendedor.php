@@ -13,7 +13,7 @@ class Vendedor extends ActiveRecord {
 
     public function __construct($args = [])
     {
-        $this->id = $args['id'] ?? null;
+        $this->id = $args['id'] ?? '';
         $this->nombre = $args['nombre'] ?? '';
         $this->apellido = $args['apellido'] ?? '';
         $this->telefono = $args['telefono'] ?? '';
