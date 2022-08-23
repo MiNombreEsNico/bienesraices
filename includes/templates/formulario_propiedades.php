@@ -1,7 +1,11 @@
 <fieldset>
                 <legend>Información General</legend>
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="propiedad[titulo]" placeholder="Título Propiedad" value="<?php echo s($propiedad->titulo); ?>">
+                <input type="text" id="titulo" name="propiedad[titulo]" placeholder="Título Propiedad" value="<?php
+
+use App\Vendedor;
+
+ echo s($propiedad->titulo); ?>">
 
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="propiedad[precio]" placeholder="Precio Propiedad" value="<?php echo s($propiedad->precio); ?>">
@@ -29,7 +33,7 @@
                 <label for="estacionamiento">Estacionamiento:</label>
                 <input type="number" id="estacionamiento" name="propiedad[estacionamiento]" placeholder="Ej: 3" min="1" max="9" value="<?php echo s($propiedad->estacionamiento); ?>">
             </fieldset>
-
+            <?php $vendedor = new Vendedor; ?>
             <fieldset>
                 <legend>Vendedor</legend> 
                 <label for="vendedor">Vendedor</label>
