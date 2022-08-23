@@ -6,6 +6,7 @@
 use App\Vendedor;
 
  echo s($propiedad->titulo); ?>">
+<?php $vendedor = new Vendedor; ?>
 
                 <label for="precio">Precio:</label>
                 <input type="number" id="precio" name="propiedad[precio]" placeholder="Precio Propiedad" value="<?php echo s($propiedad->precio); ?>">
@@ -33,7 +34,7 @@ use App\Vendedor;
                 <label for="estacionamiento">Estacionamiento:</label>
                 <input type="number" id="estacionamiento" name="propiedad[estacionamiento]" placeholder="Ej: 3" min="1" max="9" value="<?php echo s($propiedad->estacionamiento); ?>">
             </fieldset>
-            <?php $vendedor = new Vendedor; ?>
+
             <fieldset>
                 <legend>Vendedor</legend> 
                 <label for="vendedor">Vendedor</label>
