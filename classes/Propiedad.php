@@ -28,7 +28,7 @@ class Propiedad extends ActiveRecord {
         $this->wc = $args['wc'] ?? '';
         $this->estacionamiento = $args['estacionamiento'] ?? '';
         $this->creado = date('Y/m/d');
-        $this->vendedorid = $args['vendedorid'] ?? 1;
+        $this->vendedorid = $args['vendedorid'] ?? '';
     }
     
     public function validar() {
@@ -58,11 +58,10 @@ class Propiedad extends ActiveRecord {
         if(!$this->vendedorid) {
             self::$errores[] = 'Elige un vendedor';
         }
-
-         if(!$this->imagen ) {
-             self::$errores[] = 'La Imagen es Obligatoria';
-         }
-
+        
+        if(!$this->imagen ) {
+            self::$errores[] = 'La Imagen es Obligatoria';
+        }
         return self::$errores;
     }
 }
