@@ -9,6 +9,6 @@ $db = conectarDB();
 $db->set_charset('utf8');
 
 
-use App\Propiedad;
+use App\ActiveRecord;
 
 Propiedad::setDB($db);
