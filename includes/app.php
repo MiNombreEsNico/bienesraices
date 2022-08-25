@@ -11,4 +11,4 @@ $db->set_charset('utf8');
 
 use App\ActiveRecord;
 
-Propiedad::setDB($db);
+ActiveRecord::setDB($db);
